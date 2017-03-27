@@ -3,3 +3,8 @@
   background-color: #f0fff0;
   flex-grow: 1;
 }
+
+.body-style {
+  padding: 20px;
+  flex-grow: 1;
+}

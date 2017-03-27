@@ -1,9 +1,19 @@
-<div class="title-bar">
+
+<div class="title-bar-small" *screenBelowLarge>
+  <span class="glyphicon glyphicon-menu-hamburger"
+        (click)="menuService.toggleLeftSideMenu()"></span>
+  <div class="small-image-holder">
+    <img src="assets/logo.png" alt="Green Nations Logo" class="small-image">
+  </div>
+  <span class="glyphicon glyphicon-option-vertical"></span>
+</div>
+
+<div *screenLarge class="title-bar user-title-bar">
   <img src="assets/logo.png" alt="Green Nations Logo">
   <div class="menu-area">
-    <!--<ps-top-bar>
-      
-    </ps-top-bar>-->
-    <!--menu-->
+    <fw-top-bar>      
+    </fw-top-bar>
+    <fw-menu *ngIf="!menuService.isVertical">      
+    </fw-menu>
   </div>
 </div>

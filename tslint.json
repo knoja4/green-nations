@@ -44,14 +44,14 @@
     "no-debugger": true,
     "no-duplicate-variable": true,
     "no-empty": false,
-    "no-empty-interface": true,
+    "no-empty-interface": false,
     "no-eval": true,
     "no-inferrable-types": [true, "ignore-params"],
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
     "no-unused-expression": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
@@ -59,7 +59,7 @@
     "one-line": [
       true,
       "check-open-brace",
-      "check-catch",
+      //"check-catch",
       "check-else",
       "check-whitespace"
     ],
@@ -70,7 +70,8 @@
     ],
     "radix": true,
     "semicolon": [
-      "always"
+      "always",
+      "ignore-interfaces"
     ],
     "triple-equals": [
       true,
@@ -79,7 +80,6 @@
     "typedef-whitespace": [
       true,
       {
-        "call-signature": "nospace",
         "index-signature": "nospace",
         "parameter": "nospace",
         "property-declaration": "nospace",
@@ -98,8 +98,8 @@
       "check-type"
     ],
 
-    "directive-selector": [true, "attribute", "app", "camelCase"],
-    "component-selector": [true, "element", "app", "kebab-case"],
+    "directive-selector": [true, "attribute", "camelCase"],
+    "component-selector": [true, "element", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -108,7 +108,7 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true,
+    "directive-class-suffix": false,
     "no-access-missing-member": true,
     "templates-use-public": true,
     "invoke-injectable": true
