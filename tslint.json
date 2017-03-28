@@ -82,7 +82,7 @@
       {
         "index-signature": "nospace",
         "parameter": "nospace",
-        "property-declaration": "nospace",
+        // "property-declaration": "nospace",
         "variable-declaration": "nospace"
       }
     ],
