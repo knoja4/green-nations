@@ -41,6 +41,9 @@ span {
     margin-left: 8px;
 }
 
+.glyphicon-menu-left, .glyphicon-menu-right, .glyphicon-menu-down {
+  float: right;
+}
 .menu-item {
     padding: 10px 10px 10px 0;
 }

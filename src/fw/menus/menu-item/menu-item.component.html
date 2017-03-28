@@ -2,7 +2,15 @@
       [ngClass]="{'vertical-menu': menuService.isVertical, 'router-link-active': isActiveRoute}"
       (click)="menuService.showingLeftSideMenu = false">
   <span class="glyphicon {{item.icon}}"></span>
-  <span>{{item.text.toUpperCase()}}</span>  
+  <span>{{item.text.toUpperCase()}}</span>
+  <span *ngIf="item.submenu && !parentIsPopup && !menuService.isVertical" 
+        class="glyphicon glyphicon-menu-down"></span>
+  <span *ngIf="item.submenu && parentIsPopup && !menuService.isVertical" 
+        class="glyphicon glyphicon-menu-right"></span>
+  <span *ngIf="item.submenu && menuService.isVertical && !(mouseInPopup || mouseInItem)" 
+        class="glyphicon glyphicon-menu-left"></span> 
+  <span *ngIf="item.submenu && menuService.isVertical && (mouseInPopup || mouseInItem)" 
+        class="glyphicon glyphicon-menu-down"></span>   
 </div>
 <fw-popup-menu
     *ngIf="mouseInPopup || mouseInItem" 
