@@ -9,7 +9,7 @@
       true,
       "check-space"
     ],
-    "curly": true,
+    "curly": false,
     "eofline": true,
     "forin": true,
     "import-blacklist": [true, "rxjs"],
@@ -73,10 +73,7 @@
       "always",
       "ignore-interfaces"
     ],
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
+    "triple-equals": false,
     "typedef-whitespace": [
       true,
       {

@@ -63,7 +63,7 @@ export let initialMenuItems: Array<MenuItem> = [
         route: null,
         submenu: [
             {
-                text: 'Country List',
+                text: 'Country Maint',
                 icon: 'glyphicon-th-list',
                 route: '/authenticated/country-maint',
                 submenu: null

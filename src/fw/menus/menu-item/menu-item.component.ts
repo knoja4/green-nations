@@ -38,7 +38,7 @@ export class MenuItemComponent implements OnInit {
   }
   
   checkActiveRoute(route: string) {
-    this.isActiveRoute = (route == '/' + this.item.route);
+    this.isActiveRoute = (route === '/' + this.item.route);
   }
 
   ngOnInit() : void {
@@ -63,7 +63,7 @@ export class MenuItemComponent implements OnInit {
       }
     } else if (this.item.route) {
       // force horizontal menus to close by sending a mouseleave event
-      let newEvent = new MouseEvent('mouseleave', {bubbles: true});
+      const newEvent = new MouseEvent('mouseleave', {bubbles: true});
       this.renderer.invokeElementMethod(
         this.el.nativeElement, 'dispatchEvent', [newEvent]);
         
