@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, HostBinding, HostListener, ElementRef, Renderer } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 import { MenuItem, MenuService } from '../../services/menu.service';
 
@@ -24,8 +24,21 @@ export class MenuItemComponent implements OnInit {
               private el: ElementRef,
               private renderer: Renderer) {
   }
+  
+  checkActiveRoute(route: string) {
+    this.isActiveRoute = (route === '/' + this.item.route);
+  }
 
   ngOnInit() : void {
+    this.checkActiveRoute(this.router.url);
+    
+    this.router.events
+        .subscribe((event) => {
+          if (event instanceof NavigationEnd) {
+            this.checkActiveRoute(event.url);
+            // console.log(event.url + ' ' + this.item.route + ' ' + this.isActiveRoute);
+          }
+        });
   }
   
   @HostListener('click', ['$event'])
