@@ -26,6 +26,10 @@
     color: white;
 }
 
+:host(.vertical-menu.in-popup) {
+  padding-left: 16px;
+}
+
 span {
     pointer-events: none;
 }
